@@ -1,0 +1,137 @@
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+
+header {
+  background-color: var(--primary);
+  color: var(--font-on-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+  border-radius: .6rem;
+  min-width: 350px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: var(--heading-font-family);
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+button {
+  padding: 8px 24px;
+  background: none;
+  color: var(--font-on-primary);
+  margin: 0 4px 16px 4px;
+  border: 1px solid var(--font-on-primary);
+  border-radius: .6rem;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all .2s;
+  font-family: var(--text-font-family);
+}
+
+button:hover {
+  background-color: var(--primary3);
+  margin: 0 4px 16px 4px;
+  border: 1px solid var(--primary3);
+  color: var(--primary);
+}
+
+.active {
+  background-color: var(--font-on-primary);
+  color: var(--primary);
+  margin: 0 4px 16px 4px;
+  border: 1px solid var(--font-on-primary);
+  transition: none;
+}
+
+.dropborder:not(.dropborder:hover) {
+  border: 1px solid var(--primary);
+}
+
+.dropborder:hover {
+  border: 1px solid var(--primary2);
+}
+
+.fa-bars {
+  color: var(--font-on-primary);
+  font-size: 2rem;
+  display: none;
+  padding-left: 24px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: 26px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  cursor: pointer;
+  border-radius: .6rem;
+  padding: 8px 0;
+}
+
+.dropdown-content p {
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  margin: 0 8px;
+  border-radius: .3rem;
+  transition: all .2s;
+  color: var(--primary);
+}
+
+.dropdown-content p:hover {
+  background-color: var(--primary2);
+  color: var(--font-on-primary);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .fa-bars {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header {
+    flex-direction: row;
+    padding: 0 16px;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin: 16px 0;
+    font-size: 2.5rem;
+  }
+
+  .active {
+    background-color: var(--primary);
+    color: var(--font-on-primary) !important;
+    border: 1px solid var(--primary);
+  }
+}

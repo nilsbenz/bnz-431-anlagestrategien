@@ -1,0 +1,23 @@
+section {
+  background: none;
+  color: var(--primary);
+  padding: 8px 16px;
+  margin: 16px 0 16px 0; /*
+  border-radius: .6rem;
+  border: 2px solid var(--primary);
+  box-shadow: -4px 8px 16px rgba(128, 128, 128, .6); */
+}
+
+h2 {
+  margin: 8px 0;
+  font-family: var(--heading-font-family);
+  font-size: 2rem;
+  color: var(--primary3);
+}
+
+p {
+  margin: 8px 0;
+  line-height: 1.4;
+  font-family: var(--text-font-family);
+  text-align: justify;
+}

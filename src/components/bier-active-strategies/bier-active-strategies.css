@@ -1,0 +1,16 @@
+main {
+  display: grid;
+  grid-template-columns: minmax(8px, auto) 1fr minmax(8px, auto);
+}
+
+#content {
+  grid-column: 2 / 3;
+  justify-self: center;
+  max-width: 1000px;
+}
+
+h3 {
+  margin: 8px 0 0 0;
+  font-family: var(--text-font-family);
+  color: var(--primary2);
+}

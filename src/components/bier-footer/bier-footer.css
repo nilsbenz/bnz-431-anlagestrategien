@@ -1,0 +1,14 @@
+footer {
+  background-color: var(--primary);
+  margin: 8px;
+  padding: 16px;
+  border-radius: .6rem;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: var(--text-font-family);
+  color: var(--font-on-primary);
+  margin: 0;
+}
