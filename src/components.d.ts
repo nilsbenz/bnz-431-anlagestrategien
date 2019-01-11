@@ -9,25 +9,9 @@ import '@stencil/core';
 
 import '@stencil/router';
 import '@stencil/state-tunnel';
-import {
-  MatchResults,
-} from '@stencil/router';
 
 
 export namespace Components {
-
-  interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
-  interface AppProfile {
-    'match': MatchResults;
-  }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'match'?: MatchResults;
-  }
-
-  interface AppRoot {}
-  interface AppRootAttributes extends StencilHTMLAttributes {}
 
   interface BierActiveStrategies {}
   interface BierActiveStrategiesAttributes extends StencilHTMLAttributes {}
@@ -58,18 +42,19 @@ export namespace Components {
   interface BierRootAttributes extends StencilHTMLAttributes {}
 
   interface BierSection {
-    'title': string;
+    'heading': string;
+    'image': string;
+    'left': boolean;
   }
   interface BierSectionAttributes extends StencilHTMLAttributes {
-    'title'?: string;
+    'heading'?: string;
+    'image'?: string;
+    'left'?: boolean;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
-    'AppRoot': Components.AppRoot;
     'BierActiveStrategies': Components.BierActiveStrategies;
     'BierAlternativeInvestments': Components.BierAlternativeInvestments;
     'BierBasics': Components.BierBasics;
@@ -82,9 +67,6 @@ declare global {
   }
 
   interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
-    'app-root': Components.AppRootAttributes;
     'bier-active-strategies': Components.BierActiveStrategiesAttributes;
     'bier-alternative-investments': Components.BierAlternativeInvestmentsAttributes;
     'bier-basics': Components.BierBasicsAttributes;
@@ -96,24 +78,6 @@ declare global {
     'bier-section': Components.BierSectionAttributes;
   }
 
-
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
-  };
 
   interface HTMLBierActiveStrategiesElement extends Components.BierActiveStrategies, HTMLStencilElement {}
   var HTMLBierActiveStrategiesElement: {
@@ -170,9 +134,6 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
-    'app-root': HTMLAppRootElement
     'bier-active-strategies': HTMLBierActiveStrategiesElement
     'bier-alternative-investments': HTMLBierAlternativeInvestmentsElement
     'bier-basics': HTMLBierBasicsElement
@@ -185,9 +146,6 @@ declare global {
   }
 
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
-    'app-root': HTMLAppRootElement;
     'bier-active-strategies': HTMLBierActiveStrategiesElement;
     'bier-alternative-investments': HTMLBierAlternativeInvestmentsElement;
     'bier-basics': HTMLBierBasicsElement;

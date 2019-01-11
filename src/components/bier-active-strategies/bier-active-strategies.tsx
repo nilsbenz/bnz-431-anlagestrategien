@@ -13,7 +13,7 @@ export class BierActiveStrategies {
         <bier-header container="aktiv"/>
         <main>
           <div id="content">
-            <bier-section title="Einleitung">
+            <bier-section heading="Einleitung">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
               et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
               Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
@@ -23,7 +23,7 @@ export class BierActiveStrategies {
               gubergren, no
               sea takimata sanctus est Lorem ipsum dolor sit amet.
             </bier-section>
-            <bier-section title="Begriffserklärung">
+            <bier-section heading="Begriffserklärung">
               <h3>Begriff 1</h3>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
               et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.

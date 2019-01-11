@@ -5,14 +5,42 @@ import {Component, Prop} from '@stencil/core';
   styleUrl: 'bier-section.css',
   shadow: true
 })
-export class BierHeader {
+export class BierSection {
 
-  @Prop() title: string;
+  @Prop() heading: string;
+  @Prop() image: string;
+  @Prop() left: boolean;
 
   render() {
+    if (this.image) {
+      if(this.left) {
+        return (
+          <section id="withImage" class="left">
+            <div id="content">
+              <h2>{this.heading}</h2>
+              <p>
+                <slot/>
+              </p>
+            </div>
+            <img src={this.image}/>
+          </section>
+        )
+      }
+      return (
+        <section id="withImage">
+          <div id="content">
+            <h2>{this.heading}</h2>
+            <p>
+              <slot/>
+            </p>
+          </div>
+          <img src={this.image}/>
+        </section>
+      )
+    }
     return (
       <section>
-        <h2>{this.title}</h2>
+        <h2>{this.heading}</h2>
         <p>
           <slot/>
         </p>
